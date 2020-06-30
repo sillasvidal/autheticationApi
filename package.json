@@ -1,0 +1,12 @@
+{
+  "name": "authenticationAPI",
+  "version": "1.0",
+  "description": "Rest API of authentication",
+  "main": "index.js",
+  "author": "Sillas Vidal <svidalempresa@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
