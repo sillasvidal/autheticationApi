@@ -6,6 +6,9 @@
   "author": "Sillas Vidal <svidalempresa@gmail.com>",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "dev": "node ./src/server.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
   }
