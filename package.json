@@ -7,9 +7,14 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "node ./src/server.js"
+    "dev": "nodemon ./src/server.js"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sequelize": "^6.2.3",
+    "tedious": "^8.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
