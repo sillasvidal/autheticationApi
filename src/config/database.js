@@ -3,7 +3,7 @@ const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize(
     'authentication',
     'SA',
-    'S35SUP5RSRG',
+    'S35SUP5RSRG123',
     {
         host: 'localhost',
         dialect: 'mssql'
