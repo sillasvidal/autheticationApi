@@ -2,7 +2,9 @@ const User = require('../models/User');
 
 class UserController {
     async insert(req, res) {
-        return res.json({ message: 'cadastrando usuário...'})
+        const { name, email, password } = await User.create(req.body)
+
+        return res.json({ name, email, password });
     }
 }
 

@@ -6,7 +6,8 @@ module.exports = {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
-        allowNull: false
+        allowNull: false,
+        autoIncrement: true
       },
       name: {
         type: Sequelize.STRING,
@@ -19,6 +20,14 @@ module.exports = {
       password_hash: {
         type: Sequelize.STRING,
         allowNull: false
+      },
+      created_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+      updated_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
       }
     });
   },
