@@ -1,7 +1,32 @@
 const express = require('express');
-const app = express();
 const routes = require('./routes');
+const cors = require('cors');
 
-app.use(routes);
+class App {
+    constructor (){
+        this.server = express();
 
-module.exports = app;
+        this.conectaFront();
+        this.middlewares();
+        this.routes();
+    }
+
+    middlewares (){
+        this.server.use(express.json());
+    }
+
+    routes (){
+        this.server.use(routes);
+    }
+
+    conectaFront(){
+        this.server.use((req, res, next) => {
+            res.header("Access-Control-Allow-Origin", "http://localhost:3000");
+            res.header("Access-Control-Allow-Methods", 'GET,PUT,POST,DELETE');
+            this.server.use(cors());
+            next();
+        });
+    }
+}
+
+module.exports = new App().server;
